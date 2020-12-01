@@ -1,11 +1,7 @@
 <h1>TopPage2</h1>
 <h1></h1>
 
-<h1>新規投稿欄</h1>
-<%= form_with(model: @post, local: true) do |form| %>
-  <%= form.text_field :content %>
-  <%= form.submit '投稿する' %>
-<% end %>
+
 
 <% @posts.each do |post| %>
   <div class="post">
