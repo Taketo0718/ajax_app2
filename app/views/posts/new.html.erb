@@ -1,0 +1,20 @@
+<h1>TopPage2</h1>
+<h1></h1>
+
+<h1>新規投稿欄</h1>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' %>
+<% end %>
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="post-date">
+      投稿日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
+
